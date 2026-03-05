@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Assistance - Phoenix M & E Academy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Academic Assistance</a></li>
+                <li><a href="musical-education.html">Musical Education</a></li>
+            </ul>
+        </nav>
+        <div class="hero academic-hero">
+            <h1>Phoenix M & E Academy</h1>
+            <p>High-Quality Tutoring for Grade 11 & 12</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="grid">
+            <div class="card">
+                <div class="icon">🔬</div>
+                <h3>Maths & Science</h3>
+                <p>Specialized Grade 11 & 12 support in Mathematics, Physical Sciences, and Life Sciences.</p>
+            </div>
+            <div class="card">
+                <div class="icon">📖</div>
+                <h3>English & Literacy</h3>
+                <p>Comprehensive English studies included to improve academic writing and comprehension.</p>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="price-container">
+                <span class="label">Now Only</span>
+                <span class="price">R300.00</span>
+                <p class="subtext">Per Month | Monday - Friday</p>
+            </div>
+            <button class="btn-main" onclick="openInquiry('Full Academic Program')">REGISTER NOW</button>
+        </section>
+
+        <hr class="divider">
+        
+<section class="schedule-section">
+    <h2>Academy Schedule</h2>
+    
+        <div class="schedule-container">
+        <h3 class="schedule-subtitle">Monday – Friday: After School Program</h3>
+        <div class="table-wrapper">
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Time Slot</th>
+                        <th>Activity</th>
+                        <th>Focus Area</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>16:00 - 16:45</td>
+                        <td>Homework & Review</td>
+                        <td>Daily School Assignments</td>
+                    </tr>
+                    <tr>
+                        <td>16:45 - 17:30</td>
+                        <td>Core Academic Session</td>
+                        <td>Maths, Physical Sciences, Life Sciences & English</td>
+                    </tr>
+                    <tr class="break-row">
+                        <td>17:30 - 17:45</td>
+                        <td>Short Break 🍎</td>
+                        <td>Refreshments & Transition</td>
+                    </tr>
+                    <tr>
+                        <td>17:45 - 18:30</td>
+                        <td>Specialized Training</td>
+                        <td>Short Quizzes / Lesson Evaluation / Exam Prep</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 class="schedule-subtitle saturday-highlight">Saturdays: Intensive Success Sessions</h3>
+        <div class="table-wrapper">
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Time Slot</th>
+                        <th>Program Focus</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>13:00 - 14:30</td>
+                        <td><strong>Intensive Exam Prep:</strong> Past papers and problem-solving.</td>
+                    </tr>
+                    <tr>
+                        <td>14:30 - 15:30</td>
+                        <td><strong>Bridge to Future:</strong> Career Guidance & University Applications.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<section class="gallery-section">
+    <h2>Academy Showcase</h2>
+    <p>Watch, listen, and learn with Phoenix M & E Academy.</p>
+
+    <div class="gallery-grid">
+        <div class="gallery-item">
+            <h3>Academic Excellence</h3>
+            <div class="video-responsive">
+                <iframe 
+                    src="https://www.youtube.com/embed/VIDEO_ID_1" 
+                    title="Maths & Science Tutoring" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <p class="caption">Grade 12 Science Experiment Highlights</p>
+        </div>
+
+        <div class="gallery-item">
+            <h3>Student Performance</h3>
+            <div class="audio-card">
+                <p>Literature Progress - Month 3</p>
+                <audio controls>
+                    <source src="piano-recording.mp3" type="audio/mpeg">
+                    Your browser does not support audio.
+                </audio>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <h3>Creative Learning Process</h3>
+            <div class="video-responsive">
+                <iframe 
+                    src="https://www.youtube.com/embed/VIDEO_ID_2" 
+                    title="FL Studio Training" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <p class="caption">Real World Applications Of Maths & Science</p>
+        </div>
+    </div>
+</section>
+<section class="contact-form-section">
+    <div class="form-container">
+        <h2>Request a WhatsApp Callback</h2>
+        <p>Leave your details and we will contact you to discuss your child's needs.</p>
+        
+        <form id="enrollmentForm">
+            <div class="input-group">
+                <label for="parentName">Parent/Guardian Name</label>
+                <input type="text" id="parentName" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="input-group">
+                <label for="studentGrade">Student Grade</label>
+                <select id="studentGrade">
+                    <option value="Grade 11">Grade 11</option>
+                    <option value="Grade 12">Grade 12</option>
+                    <option value="Music Only">Music Student (All Ages)</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="contactNumber">Phone Number</label>
+                <input type="tel" id="contactNumber" placeholder="e.g. 071 234 5678" required>
+            </div>
+
+            <div class="input-group">
+                <label for="interest">Interested In:</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="checkAcademic" value="Academic"> Academics
+                    <input type="checkbox" id="checkMusic" value="Music"> Musical Education
+                </div>
+            </div>
+
+            <button type="submit" class="btn-submit">Submit Request</button>
+        </form>
+        <div id="formFeedback" class="hidden"></div>
+    </div>
+</section>
+    </main>
+
+    <footer>
+        <section class="location-section">
+    <div class="find-us-container">
+        <div class="location-icon">📍</div>
+        <h2>Our Location</h2>
+        <p>10738 Sifunindlela St. 1245</p>
+        <a href="https://www.google.com/maps/search/?api=1&query=10738+Sifunindlela+St+1245" 
+           target="_blank" 
+           class="btn-find-us">
+           Find Us on Google Maps
+        </a>
+    </div>
+</section>
+
+
+<footer class="main-footer">
+    <div class="contact-links">
+        <p>
+            📍 10738 Sifunindlela St. 1245
+        </p>
+        <p>
+            📞 WhatsApp: <a href="https://wa.me/27665568332" target="_blank" class="footer-link">066 556 8332</a>
+        </p>
+        <p>
+            ✉️ Email: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=phoenixacademyservices@gmail.com" target="_blank" class="footer-link">phoenixacademyservices@gmail.com</a>
+        </p>
+    </div>
+    <p class="copyright">&copy; 2026 Phoenix M & E Academy Tutoring</p>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

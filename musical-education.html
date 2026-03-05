@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musical Education - Phoenix M & E Academy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="academic-assistance.html">Academic Assistance</a></li>
+                <li><a href="musical-education.html" class="active">Musical Education</a></li>
+            </ul>
+        </nav>
+        <div class="hero music-hero">
+            <h1>Musical Education Program</h1>
+            <p>Master your craft from classical keys to digital beats</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="grid">
+            <div class="card music-card">
+                <div class="icon">🎹</div>
+                <h3>Professional Piano Lessons</h3>
+                <p>From basic music theory to advanced performance. We cover Classical, Gospel, and contemporary styles.</p>
+                <button class="btn-small" onclick="openInquiry('Piano')">Inquire Now</button>
+            </div>
+
+            <div class="card music-card">
+                <div class="icon">💻</div>
+                <h3>FL Studio Producer Training</h3>
+                <p>Learn professional beat-making, mixing, and mastering. Perfect for aspiring South African producers.</p>
+                <button class="btn-small" onclick="openInquiry('FL Studio')">Inquire Now</button>
+            </div>
+        </section>
+
+        <div id="status-message" class="hidden"></div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
