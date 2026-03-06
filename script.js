@@ -80,3 +80,15 @@ function registerNow() {
         window.open(`https://wa.me/${myNumber}?text=${encodeURIComponent(message)}`, '_blank');
     }
 }
+function partialRegister(type) {
+    const myNumber = "27665568332"; // Your WhatsApp number
+    let message = "";
+
+    if (type === 'Academic') {
+        message = "Hello Phoenix M & E Academy, I am interested in registering for an Individual Academic Subject (R100).";
+    } else {
+        message = "Hello Phoenix M & E Academy, I am interested in Individual Musical Education (R150).";
+    }
+
+    window.open(`https://wa.me/${myNumber}?text=${encodeURIComponent(message)}`, '_blank');
+}

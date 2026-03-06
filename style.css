@@ -530,3 +530,51 @@ video {
     color: #333333;
     transform: scale(1.05);
 }
+.partial-pricing {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.pricing-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.price-card {
+    border: 2px solid #e0e0e0;
+    padding: 25px;
+    border-radius: 15px;
+    width: 280px;
+    transition: 0.3s;
+}
+
+.price-card:hover {
+    border-color: var(--primary-green);
+    transform: translateY(-5px);
+}
+
+.price-card h4 { color: var(--primary-green); margin-bottom: 10px; }
+
+.price-card .price { font-size: 1.8rem; font-weight: bold; color: #333; }
+
+.price-card .price span { font-size: 0.9rem; color: #777; }
+
+.btn-partial {
+    background-color: transparent;
+    border: 2px solid var(--primary-green);
+    color: var(--primary-green);
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.btn-partial:hover {
+    background-color: var(--primary-green);
+    color: white;
+}
