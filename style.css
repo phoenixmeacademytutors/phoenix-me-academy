@@ -512,3 +512,21 @@ video {
     border-radius: 50px;
     font-weight: bold;
 }
+.btn-register {
+    background-color: #2e7d32; /* Phoenix Primary Green */
+    color: #ffffff;
+    padding: 15px 35px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px; /* Rounded pill shape */
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-register:hover {
+    background-color: #ffeb3b; /* Accent Yellow on hover */
+    color: #333333;
+    transform: scale(1.05);
+}

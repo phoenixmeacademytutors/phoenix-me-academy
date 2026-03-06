@@ -54,7 +54,7 @@ document.getElementById('enrollmentForm').addEventListener('submit', function(e)
 
     // 2. Format the WhatsApp Message
     const myNumber = "27665568332"; // Your WhatsApp number
-    const message = `*New Lead from Website*%0A` +
+    const message = `*Registration Inquiry Request*%0A` +
                     `*Name:* ${name}%0A` +
                     `*Grade:* ${grade}%0A` +
                     `*Parent Phone:* ${phone}%0A` +
@@ -69,3 +69,14 @@ document.getElementById('enrollmentForm').addEventListener('submit', function(e)
     feedback.className = "success-msg";
     this.reset();
 });
+function registerNow() {
+    const confirmRegistration = confirm("Would you like to register for the Full Academic Program?");
+    
+    if (confirmRegistration) {
+        const myNumber = "27665568332"; // Your WhatsApp number
+        const message = "Hello Phoenix M & E Academy, I would like to register for the Full Academic Program.";
+        
+        // This line is what actually opens WhatsApp
+        window.open(`https://wa.me/${myNumber}?text=${encodeURIComponent(message)}`, '_blank');
+    }
+}
