@@ -739,3 +739,164 @@ video {
     filter: grayscale(1);
     opacity: 0.6;
 }
+/* Registration Page Styles */
+.registration-form {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.registration-form h2 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+}
+
+.registration-form input[type="text"],
+.registration-form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px; /* Prevents auto-zoom on iPhones/Mobile */
+    box-sizing: border-box;
+}
+
+.program-selection {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 5px solid #ff9800; /* Phoenix orange accent */
+}
+
+.program-selection p {
+    font-weight: bold;
+    margin-top: 0;
+    color: #333;
+}
+
+.program-selection label {
+    display: block;
+    padding: 8px 0;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.registration-form button {
+    width: 100%;
+    background-color: #ff9800;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.registration-form button:hover {
+    background-color: #e68a00;
+}
+
+/* Mobile responsive padding */
+@media (max-width: 600px) {
+    .registration-form {
+        margin: 20px;
+        padding: 15px;
+    }
+}
+.registration-form input[type="text"],
+.registration-form input[type="tel"],
+.registration-form input[type="email"], /* Add this line */
+.registration-form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+/* Watermark Background Style */
+body {
+    background-image: url('phoenix-watermark.png'); /* The faded image you created */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; /* Keeps the logo centered while they scroll */
+    background-size: 80%; /* Adjusts the size of the watermark on the screen */
+    background-color: #ffffff; /* Ensures the page starts with a clean white base */
+}
+
+/* Important: Make your form solid white so the logo doesn't bleed through the text areas */
+.registration-form {
+    background: #ffffff; /* This must stay solid white */
+    position: relative; /* Helps layer the form above the background */
+    z-index: 10; /* Ensures the form is "on top" */
+    /* ...keep your other existing registration-form styles here... */
+}
+
+/* Background Watermark Setup */
+body {
+    background-color: #f4f7f6; /* A very light grey/white base */
+    background-image: url('logo.png'); /* Ensure your logo file is named logo.png in your folder */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 60%; /* This keeps the logo from touching the edges */
+    /* This creates the 'faded' effect using CSS if your image isn't transparent yet */
+    background-blend-mode: lighten; 
+    opacity: 0.95; 
+}
+
+/* Ensure the form stands out against the background */
+.registration-form {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.95); /* Semi-transparent white to show a hint of the logo */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    border-top: 5px solid #ff9800; /* Phoenix Orange accent */
+    position: relative;
+    z-index: 1;
+}
+
+/* Mobile Tweak: Scale the logo down on your Samsung A05 */
+@media (max-width: 600px) {
+    body {
+        background-size: 90%;
+    }
+    .registration-form {
+        margin: 20px;
+        padding: 20px;
+    }
+}
+/* Update Buttons to Phoenix Orange */
+.register-btn, .select-btn, button[onclick="submitRegistration()"] {
+    background-color: #ff9800 !important;
+    color: white;
+    border: none;
+}
+button[onclick="submitRegistration()"] {
+    background-color: #ff9800; /* Phoenix Orange */
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button[onclick="submitRegistration()"]:active {
+    background-color: #e68a00; /* Darkens slightly when tapped */
+    transform: scale(0.98); /* Slight 'press' effect for mobile */
+}

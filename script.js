@@ -37,29 +37,6 @@ function openInquiry(courseName) {
         }, 1500);
     }
 }
-function registerNow() {
-    const confirmRegistration = confirm("Would you like to register for the Full Academic Program?");
-    
-    if (confirmRegistration) {
-        const myNumber = "27665568332"; // Your WhatsApp number
-        const message = "Hello Phoenix M & E Academy, I would like to register for the Full Academic Program.";
-        
-        // This line is what actually opens WhatsApp
-        window.open(`https://wa.me/${myNumber}?text=${encodeURIComponent(message)}`, '_blank');
-    }
-}
-function partialRegister(type) {
-    const myNumber = "27665568332"; // Your WhatsApp number
-    let message = "";
-
-    if (type === 'Academic') {
-        message = "Hello Phoenix M & E Academy, I am interested in registering for an Individual Academic Subject (R100).";
-    } else {
-        message = "Hello Phoenix M & E Academy, I am interested in Individual Musical Education (R150).";
-    }
-
-    window.open(`https://wa.me/${myNumber}?text=${encodeURIComponent(message)}`, '_blank');
-}
 function submitCallbackRequest() {
     // Collect data using the exact IDs from your HTML
     const name = document.getElementById('studentName').value;
@@ -90,4 +67,33 @@ function submitCallbackRequest() {
     window.open(`https://wa.me/${myNumber}?text=${text}`, '_blank');
 }
 
+function submitRegistration() {
+    const name = document.getElementById('regName').value;
+    const phone = document.getElementById('regPhone').value; // New
+    const email = document.getElementById('regEmail').value; // New
+    const school = document.getElementById('regSchool').value;
+    const grade = document.getElementById('regGrade').value;
+    const payment = document.getElementById('payMethod').value;
+    let selected = [];
+    document.querySelectorAll('input[name="prog"]:checked').forEach((box) => {
+        selected.push(box.value);
+    });
+
+    if (!name || !phone || selected.length === 0) {
+        alert("Please provide a name, phone number, and select a program.");
+        return;
+    }
+
+    const myNumber = "27665568332";
+    const message = `*NEW ACADEMY REGISTRATION*%0A%0A` +
+                    `*Student:* ${name}%0A` +
+                    `*WhatsApp:* ${phone}%0A` +
+                    `*Email:* ${email}%0A` +
+                    `*School:* ${school}%0A` +
+                    `*Grade:* ${grade}%0A` +
+                    `*Selection:* ${selected.join(", ")}%0A` +
+                    `*Payment:* ${payment}`;
+
+    window.open(`https://wa.me/${myNumber}?text=${message}`, '_blank');
+}
 
