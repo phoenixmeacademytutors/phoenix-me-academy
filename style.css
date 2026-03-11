@@ -898,5 +898,5 @@ button[onclick="submitRegistration()"] {
 
 button[onclick="submitRegistration()"]:active {
     background-color: #e68a00; /* Darkens slightly when tapped */
-    transform: scale(0.98); /* Slight 'press' effect for mobile */
+    transform: scale(0.98); /* Slight 'press'for mobile */
 }

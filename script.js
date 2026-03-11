@@ -29,7 +29,7 @@ function openInquiry(courseName) {
         statusBox.classList.remove('hidden');
         statusBox.style.display = 'block';
         
-        // Example: Redirect to WhatsApp with a pre-filled message
+       
         setTimeout(() => {
             const phoneNumber = "27665568332"; // From your flyer
             const message = encodeURIComponent(`Hi Phoenix Academy, I'm interested in the ${courseName} program.`);
@@ -56,7 +56,7 @@ function submitCallbackRequest() {
 
     const myNumber = "27665568332"; 
     
-    // Create the professional lead message
+
     const text = `Academic Enrollment Form%0A%0A` +
                  `*Student Initiative Enrollment*%0A` +
                  `*Name:* ${name}%0A` +
