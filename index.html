@@ -35,11 +35,26 @@
             </div>
         </section>
 
-        <section class="cta-section">
-<div class="registration-container">
-    <p class="price-tag">Now Only R300.00</p>
-    <button class="btn-register" onclick="registerNow()">Register Now</button>
-</div>
+<section class="pricing-featured">
+    <div class="pricing-card-highlight">
+        <span class="badge">Most Popular</span>
+        <h2>Full Academic Enrollment Discount</h2>
+        <div class="price-container">
+            <span class="currency">R</span>
+            <span class="amount">300</span>
+            <span class="period">/month</span>
+        </div>
+        <p class="price-save">Save R100 by bundling subjects!</p>
+        
+        <button class="btn-register-eye-catching" onclick="registerNow()">
+            Register Now
+            <span class="btn-icon">➜</span>
+        </button>
+        
+        <p class="secure-text">🔒 Secure registration via WhatsApp</p>
+    </div>
+</section>
+
 
         </section>
 <section class="partial-pricing">
@@ -54,12 +69,13 @@
                 <li>Mathematics</li>
                 <li>Physical Sciences</li>
                 <li>Life Sciences</li>
+                <li>English</li>
             </ul>
             <button class="btn-partial" onclick="partialRegister('Academic')">Select Subject</button>
         </div>
 
         <div class="price-card">
-            <h4>Musical Education</h4>
+            <h4>Musical Education(Coming Soon)</h4>
             <p class="price">R150 <span>/monthly</span></p>
             <ul>
                 <li>Instrument Training</li>
@@ -75,42 +91,17 @@
         
 <section class="schedule-section">
     <h2>Academy Schedule</h2>
+    <p>Check our latest session times below. We update this regularly!</p>
     
-        <div class="schedule-container">
-        <h3 class="schedule-subtitle">Monday – Friday: After School Program</h3>
-        <div class="table-wrapper">
-            <table class="schedule-table">
-                <thead>
-                    <tr>
-                        <th>Time Slot</th>
-                        <th>Activity</th>
-                        <th>Focus Area</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>16:00 - 16:45</td>
-                        <td>Homework & Review</td>
-                        <td>Daily School Assignments</td>
-                    </tr>
-                    <tr>
-                        <td>16:45 - 17:30</td>
-                        <td>Core Academic Session</td>
-                        <td>Maths, Physical Sciences, Life Sciences & English</td>
-                    </tr>
-                    <tr class="break-row">
-                        <td>17:30 - 17:45</td>
-                        <td>Short Break 🍎</td>
-                        <td>Refreshments & Transition</td>
-                    </tr>
-                    <tr>
-                        <td>17:45 - 18:30</td>
-                        <td>Specialized Training</td>
-                        <td>Short Quizzes / Lesson Evaluation / Exam Prep</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+    <div class="schedule-image-container">
+        <img src="current-schedule.jpg" alt="Phoenix M & E Academy Schedule" class="responsive-schedule">
+    </div>
+
+    <div class="schedule-actions">
+        <p>Need a PDF version for printing?</p>
+        <a href="schedule.pdf" download class="btn-download">Download Timetable</a>
+    </div>
+
 
         <h3 class="schedule-subtitle saturday-highlight">Saturdays: Intensive Success Sessions</h3>
         <div class="table-wrapper">
@@ -123,11 +114,11 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>13:00 - 14:30</td>
+                        <td>15:00 - 15:45</td>
                         <td><strong>Intensive Exam Prep:</strong> Past papers and problem-solving.</td>
                     </tr>
                     <tr>
-                        <td>14:30 - 15:30</td>
+                        <td>15:45 - 16:30</td>
                         <td><strong>Bridge to Future:</strong> Career Guidance & University Applications.</td>
                     </tr>
                 </tbody>
@@ -158,7 +149,7 @@
             <div class="audio-card">
                 <p>Literature Progress - Month 3</p>
                 <audio controls>
-                    <source src="piano-recording.mp3" type="audio/mpeg">
+                    <source src="class-recording" type="audio/mpeg">
                     Your browser does not support audio.
                 </audio>
             </div>
@@ -180,20 +171,22 @@
 <section class="contact-form-section">
     <div class="form-container">
         <h2>Request a WhatsApp Callback</h2>
-        <p>Leave your details and we will contact you to discuss your child's needs.</p>
+        <p>Leave your details and we will contact you to discuss your enrollment.</p>
         
         <form id="enrollmentForm">
             <div class="input-group">
-                <label for="parentName">Parent/Guardian Name</label>
-                <input type="text" id="parentName" placeholder="Enter your full name" required>
+                <label for="studentName">Student Name</label>
+                <input type="text" id="studentName" placeholder="Enter your full name" required>
             </div>
 
             <div class="input-group">
                 <label for="studentGrade">Student Grade</label>
                 <select id="studentGrade">
+                  <option value="Select Grade">Select Grade</option>
+                  <option value="Grade 10">Grade 10</option>
                     <option value="Grade 11">Grade 11</option>
                     <option value="Grade 12">Grade 12</option>
-                    <option value="Music Only">Music Student (All Ages)</option>
+
                 </select>
             </div>
 
@@ -202,15 +195,23 @@
                 <input type="tel" id="contactNumber" placeholder="e.g. 071 234 5678" required>
             </div>
 
-            <div class="input-group">
-                <label for="interest">Interested In:</label>
-                <div class="checkbox-group">
-                    <input type="checkbox" id="checkAcademic" value="Academic"> Academics
-                    <input type="checkbox" id="checkMusic" value="Music"> Musical Education
-                </div>
-            </div>
+           <div class="callback-interests">
+    <p>Interested In:</p>
+    
+    <label class="interest-item">
+        <input type="checkbox" name="interest" value="Academics">
+        <span>Academics</span>
+    </label>
 
-            <button type="submit" class="btn-submit">Submit Request</button>
+    <label class="interest-item disabled-item">
+        <input type="checkbox" name="interest" value="Music" disabled>
+        <span>Musical Education (currently unavailable)</span>
+    </label>
+           </div>
+
+   <div>
+           <button type="button" class="btn-submit" onclick="submitCallbackRequest()">Submit Request</button>
+
         </form>
         <div id="formFeedback" class="hidden"></div>
     </div>
@@ -239,6 +240,9 @@
         </p>
         <p>
             📞 WhatsApp: <a href="https://wa.me/27665568332" target="_blank" class="footer-link">066 556 8332</a>
+        </p>
+         <p>
+            📞 WhatsApp: <a href="https://wa.me/27680748990" target="_blank" class="footer-link">068 074 8990</a>
         </p>
         <p>
             ✉️ Email: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=phoenixacademyservices@gmail.com" target="_blank" class="footer-link">phoenixacademyservices@gmail.com</a>

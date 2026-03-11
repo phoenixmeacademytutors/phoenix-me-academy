@@ -37,38 +37,6 @@ function openInquiry(courseName) {
         }, 1500);
     }
 }
-
-document.getElementById('enrollmentForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // 1. Collect the data from the form
-    const name = document.getElementById('parentName').value;
-    const grade = document.getElementById('studentGrade').value;
-    const phone = document.getElementById('contactNumber').value;
-    
-    // Check which interests were selected
-    let interests = [];
-    if(document.getElementById('checkAcademic').checked) interests.push("Academic");
-    if(document.getElementById('checkMusic').checked) interests.push("Music");
-    const interestList = interests.join(" & ");
-
-    // 2. Format the WhatsApp Message
-    const myNumber = "27665568332"; // Your WhatsApp number
-    const message = `*Registration Inquiry Request*%0A` +
-                    `*Name:* ${name}%0A` +
-                    `*Grade:* ${grade}%0A` +
-                    `*Parent Phone:* ${phone}%0A` +
-                    `*Interested In:* ${interestList}`;
-
-    // 3. Open WhatsApp
-    window.open(`https://wa.me/${myNumber}?text=${message}`, '_blank');
-    
-    // 4. Show success on the website
-    const feedback = document.getElementById('formFeedback');
-    feedback.innerHTML = "Opening WhatsApp to send your request...";
-    feedback.className = "success-msg";
-    this.reset();
-});
 function registerNow() {
     const confirmRegistration = confirm("Would you like to register for the Full Academic Program?");
     
@@ -92,3 +60,34 @@ function partialRegister(type) {
 
     window.open(`https://wa.me/${myNumber}?text=${encodeURIComponent(message)}`, '_blank');
 }
+function submitCallbackRequest() {
+    // Collect data using the exact IDs from your HTML
+    const name = document.getElementById('studentName').value;
+    const grade = document.getElementById('studentGrade').value;
+    const phone = document.getElementById('contactNumber').value;
+    
+    // Collect checked interests
+    let interests = [];
+    document.querySelectorAll('input[name="interest"]:checked').forEach((box) => {
+        interests.push(box.value);
+    });
+
+    if (!name || !phone) {
+        alert("Please provide a name and contact number.");
+        return;
+    }
+
+    const myNumber = "27665568332"; 
+    
+    // Create the professional lead message
+    const text = `Academic Enrollment Form%0A%0A` +
+                 `*Student Initiative Enrollment*%0A` +
+                 `*Name:* ${name}%0A` +
+                 `*Grade:* ${grade}%0A` +
+                 `*Contact:* ${phone}%0A` +
+                 `*Interested In:* ${interests.join(", ") || "Academics"}`;
+
+    window.open(`https://wa.me/${myNumber}?text=${text}`, '_blank');
+}
+
+
