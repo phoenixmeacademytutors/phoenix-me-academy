@@ -50,7 +50,7 @@ function submitCallbackRequest() {
     });
 
     if (!name || !phone) {
-        alert("Please provide a name and contact number.");
+        alert("please provide a name and contact number.");
         return;
     }
 

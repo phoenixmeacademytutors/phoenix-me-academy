@@ -832,7 +832,7 @@ body {
     background-position: center;
     background-attachment: fixed; /* Keeps the logo centered while they scroll */
     background-size: 80%; /* Adjusts the size of the watermark on the screen */
-    background-color: #ffffff; /* Ensures the page starts with a clean white base */
+    background-color: #ffffff; /* 
 }
 
 /* Important: Make your form solid white so the logo doesn't bleed through the text areas */
@@ -899,4 +899,5 @@ button[onclick="submitRegistration()"] {
 button[onclick="submitRegistration()"]:active {
     background-color: #e68a00; /* Darkens slightly when tapped */
     transform: scale(0.98); /* Slight 'press'for mobile */
+}
 }
